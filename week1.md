@@ -55,21 +55,31 @@ What a decentralised version of a game like monopoly would be like, if there was
 
 ### Homework 2. 
 1. Using a blockchain explorer, have a look at the following transactions, what do they do? 
-    1. 0x0ec3f2488a93839524add10ea229e773f6bc891b4eb4794c3337d449526379
-0b
+    1. 0x0ec3f2488a93839524add10ea229e773f6bc891b4eb4794c3337d4495263790b
+    It is sending the multiple transactions. Seems like DAO is attacked. 
     2. 0x4fc1580e7f66c58b7c26881cce0aab9c3509afe6e507527f30566fbf8039bcd0
+    Smart contract deployment. 
     3. 0x552bc0322d78c5648c5efa21d2daa2d0f14901ad4b15531f1ab5bbe5674de34f
+    Polynetwork exploit. Transfer from and to address is same. Potentially block manipulation? 
     4. 0x7a026bf79b36580bf7ef174711a3de823ff3c93c65304c3acc0323c77d62d0ed
+    Not sure, again polynetork exploiter sending to another account potnetially to get value transfered out. 
     5. 0x814e6a21c8eb34b62a05c1d0b14ee932873c62ef3c8575dc49bcf12004714eda
+    same atacher 3 and 4 returns coins to the DAI.
     
 2. What is the largest account balance you can find ?
+    0xF977814e90dA44bFA03b6295A0616a897441aceC  - $3,160,540,713.43 (@ $1,296.99/ETH) that belongs to binance
 
 3. What is special about these accounts :
     1. 0x1db3439a222c519ab44bb1144fc28167b4fa6ee6
+    It one of the validators. That did a deposito into a Beacon Chain 
     2. 0x000000000000000000000000000000000000dEaD
+    Token burning account to remove the coins from the supply
 4. Using remix add this contract as a source file
     1. Compile the contract
+    Done, just had to reselect the compiler version. 
     2. Deploy the contract to the Remix VM environment
+    
+    ![image](https://user-images.githubusercontent.com/47504179/196774031-555f6535-7564-4939-a9fa-ad3a1ec63f5c.png)
 
 
 
