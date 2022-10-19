@@ -41,11 +41,11 @@ A chain of cryptographically secured blocks that acts as a journal of all the ve
 #### Insenticization scheme
 (e.g., proof-of-work costs plus block rewards) to economically secure the state machine in an open environment
 
+*extra* 
+#### How does Ethereum constrain the resources used by a smart contract if it cannot predict resource use in advance?
+To answer this challenge, Ethereum introduces a metering mechanism called gas. As the EVM executes a smart contract, it carefully accounts for every instruction (computation, data access, etc.). Each instruction has a predetermined cost in units of gas. When a transaction triggers the execution of a smart contract, it must include an amount of gas that sets the upper limit of what can be consumed running the smart contract. The EVM will terminate execution if the amount of gas consumed by computation exceeds the gas available in the transaction. Gas is the mechanism Ethereum uses to allow Turing-complete computation while limiting the resources that any program can consume.
 
-
-
-
-### Homework 
+### Homework 1.
 What a decentralised version of a game like monopoly would be like, if there was no software on a central server.
 
 *Consider*
@@ -53,6 +53,7 @@ What a decentralised version of a game like monopoly would be like, if there was
 3. How would people cheat ?
 4. How could you prevent them from cheating ?
 
+### Homework 2. 
 
 
 
