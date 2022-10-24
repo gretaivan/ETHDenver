@@ -4,9 +4,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 pragma solidity ^0.8.0;//0.8.17;
 
 
-contract VolcanoCoin {
+contract VolcanoCoin is Ownable {
     uint256 totalSupply = 10000; 
-    address public owner; 
+    //address public owner; 
 
     
     struct User {
@@ -22,21 +22,14 @@ contract VolcanoCoin {
     User[] public balances; 
     mapping (address => uint ) public balancesMap; 
 
-
-    modifier onlyOwner () {
-        require (msg.sender == owner, "you are not an owner, the supply increase is not allowed");
-        _;
-    }
-
     modifier contractUser () {
         require(isContractUser(), "you are not a contract user, no balances to show");
         _;
     }
 
     constructor() {
-        owner = msg.sender;
-        //createRecordInMemory(owner, totalSupply);
-        createRecord(owner, totalSupply);
+
+        createRecord(owner(), totalSupply);
     }
 
     event supplyChange (uint256); 
@@ -98,17 +91,5 @@ contract VolcanoCoin {
     function getAllBalancesMapping() public contractUser view returns (mapping(address => uint)) {
         return balancesMap;
     }
-*/
-
-
-
-
-
-
-
-
-
-
-    
-
+*/  
 }
